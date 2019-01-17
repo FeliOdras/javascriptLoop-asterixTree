@@ -1,10 +1,14 @@
 "use strict"
 
-function printAsterixTree() {
-    const asterix = '*';
-    for (let i = 1; i < 6; i++) {
-        let asterixTree = asterix + asterix;
-        console.log(asterixTree);
+function printTree(loops) {
+    let treeLine = "*"
+    for (let i = 1; i < loops; i++) {
+        treeLine += '<br>';
+        console.log(treeLine);
+        for (let j = 0; j <= i; j++) {
+            treeLine += "*"
+        }
     }
+    return treeLine;
 }
-printAsterixTree()
+document.getElementById('output').innerHTML = printTree(5)
