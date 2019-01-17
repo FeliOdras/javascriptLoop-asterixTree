@@ -1,14 +1,13 @@
 "use strict"
 
 function printTree(loops) {
-    let treeLine = "*"
+    let tree = "*"
     for (let i = 1; i < loops; i++) {
-        treeLine += '<br>';
-        console.log(treeLine);
+        tree += '<br>';
         for (let j = 0; j <= i; j++) {
-            treeLine += "*"
+            tree += "*"
         }
     }
-    return treeLine;
+    return tree;
 }
 document.getElementById('output').innerHTML = printTree(5)
